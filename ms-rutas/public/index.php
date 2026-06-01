@@ -8,7 +8,7 @@ require __DIR__ . '/../app/config/database.php';
 
 $cors      = require __DIR__ . '/../app/middlewares/CorsMiddleware.php';
 $auth      = require __DIR__ . '/../app/middlewares/AuthMiddleware.php';
-$endpoints = require __DIR__ . '/../app/conductores/presentation/routers/endpoints.php';
+$endpoints = require __DIR__ . '/../app/rutas/presentation/routers/endpoints.php';
 
 $app = AppFactory::create();
 

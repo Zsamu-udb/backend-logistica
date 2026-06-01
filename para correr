@@ -1,0 +1,21 @@
+# Abrir 5 terminales distintas, una por microservicio
+
+# Terminal 1
+cd backend-logistica/ms-auth
+php -S localhost:8001 -t public
+
+# Terminal 2
+cd backend-logistica/ms-conductores
+php -S localhost:8002 -t public
+
+# Terminal 3
+cd backend-logistica/ms-vehiculos
+php -S localhost:8003 -t public
+
+# Terminal 4
+cd backend-logistica/ms-rutas
+php -S localhost:8004 -t public
+
+# Terminal 5
+cd backend-logistica/ms-viajes
+php -S localhost:8005 -t public
