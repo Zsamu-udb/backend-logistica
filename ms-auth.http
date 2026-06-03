@@ -1,1 +1,25 @@
-    
+    ### Login correcto
+POST http://localhost:8001/login
+Content-Type: application/json
+
+{
+    "usuario": "admin",
+    "contrasena": "admin123"
+}
+
+### Login con correo
+POST http://localhost:8001/login
+Content-Type: application/json
+
+{
+    "correo": "admin@logitrans.com",
+    "contrasena": "admin123"
+}
+
+### Validar token (reemplaza el token con el que retorna el login)
+GET http://localhost:8001/validate
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Logout
+POST http://localhost:8001/logout
+Authorization: Bearer AQUI_VA_EL_TOKEN
