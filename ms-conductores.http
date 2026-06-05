@@ -1,0 +1,55 @@
+### Listar todos
+GET http://localhost:8002/conductores
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por documento
+GET http://localhost:8002/conductores?documento=1000123456
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por licencia
+GET http://localhost:8002/conductores?licencia=LIC-1001
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por estado
+GET http://localhost:8002/conductores?estado=disponible
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver uno
+GET http://localhost:8002/conductores/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Crear
+POST http://localhost:8002/conductores
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "nombres": "Pedro",
+    "apellidos": "Gomez",
+    "documento": "1000999888",
+    "telefono": "3009998877",
+    "correo": "pedro@logitrans.com",
+    "numero_licencia": "LIC-2001",
+    "categoria_licencia": "C2",
+    "fecha_vencimiento_licencia": "2028-01-15",
+    "estado": "disponible"
+}
+
+### Editar
+PUT http://localhost:8002/conductores/1
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "telefono": "3001112233",
+    "categoria_licencia": "C3"
+}
+
+### Cambiar estado
+PATCH http://localhost:8002/conductores/1/estado
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "estado": "en_ruta"
+}
