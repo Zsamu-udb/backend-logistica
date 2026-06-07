@@ -1,0 +1,52 @@
+### Listar todos
+GET http://localhost:8003/vehiculos
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por placa
+GET http://localhost:8003/vehiculos?placa=ABC123
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por estado
+GET http://localhost:8003/vehiculos?estado=disponible
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por tipo
+GET http://localhost:8003/vehiculos?tipo=Camion
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver uno
+GET http://localhost:8003/vehiculos/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Crear
+POST http://localhost:8003/vehiculos
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "placa": "DEF456",
+    "tipo_vehiculo": "Camion",
+    "capacidad_carga": 8000,
+    "modelo": "2023",
+    "marca": "Mercedes",
+    "estado": "disponible"
+}
+
+### Editar
+PUT http://localhost:8003/vehiculos/1
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "capacidad_carga": 5500,
+    "modelo": "2023"
+}
+
+### Cambiar estado
+PATCH http://localhost:8003/vehiculos/1/estado
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "estado": "mantenimiento"
+}
