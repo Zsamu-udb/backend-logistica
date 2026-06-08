@@ -1,0 +1,81 @@
+### Listar rutas
+GET http://localhost:8004/rutas
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Buscar por ciudad
+GET http://localhost:8004/rutas?ciudad=Bogota
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver una ruta
+GET http://localhost:8004/rutas/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Crear ruta
+POST http://localhost:8004/rutas
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "ciudad_origen": "Cali",
+    "ciudad_destino": "Bogota",
+    "distancia": 460,
+    "tiempo_estimado": "9 horas",
+    "observaciones": "Ruta por la vía Panamericana"
+}
+
+### Editar ruta
+PUT http://localhost:8004/rutas/1
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "tiempo_estimado": "8 horas 30 minutos",
+    "observaciones": "Ruta actualizada"
+}
+
+### Listar programaciones
+GET http://localhost:8004/programaciones
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Filtrar por estado
+GET http://localhost:8004/programaciones?estado=programado
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Filtrar por conductor
+GET http://localhost:8004/programaciones?conductor_id=1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Filtrar por fecha
+GET http://localhost:8004/programaciones?fecha=2026-06-15
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver una programacion
+GET http://localhost:8004/programaciones/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Programar viaje
+POST http://localhost:8004/programaciones
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "conductor_id": 1,
+    "vehiculo_id": 1,
+    "ruta_id": 1,
+    "fecha_salida": "2026-06-20",
+    "hora_salida": "06:00:00",
+    "fecha_estimada_llegada": "2026-06-20",
+    "observaciones": "Carga de electrodomésticos"
+}
+
+### Reprogramar viaje
+PUT http://localhost:8004/programaciones/1
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "fecha_salida": "2026-06-22",
+    "hora_salida": "07:00:00",
+    "fecha_estimada_llegada": "2026-06-22",
+    "observaciones": "Reprogramado por clima"
+}
