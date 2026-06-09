@@ -1,0 +1,61 @@
+### Listar todos los seguimientos
+GET http://localhost:8005/seguimientos
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Filtrar por programacion
+GET http://localhost:8005/seguimientos?programacion_viaje_id=1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Filtrar por estado
+GET http://localhost:8005/seguimientos?estado=en_transito
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver un seguimiento
+GET http://localhost:8005/seguimientos/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Ver historial completo de un viaje
+GET http://localhost:8005/seguimientos/historial/1
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Registrar novedad manualmente
+POST http://localhost:8005/seguimientos
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "programacion_viaje_id": 1,
+    "estado": "retrasado",
+    "novedad": "Cierre de vía por accidente en la autopista"
+}
+
+### Iniciar viaje
+POST http://localhost:8005/viajes/1/iniciar
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+### Registrar retraso
+POST http://localhost:8005/viajes/1/retrasar
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "novedad": "Retraso por tráfico en peaje de La Variante"
+}
+
+### Finalizar viaje
+POST http://localhost:8005/viajes/1/finalizar
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "novedad": "Mercancía entregada sin novedades."
+}
+
+### Cancelar viaje
+POST http://localhost:8005/viajes/1/cancelar
+Content-Type: application/json
+Authorization: Bearer AQUI_VA_EL_TOKEN
+
+{
+    "novedad": "Cancelado por falla mecánica del vehículo."
+}
