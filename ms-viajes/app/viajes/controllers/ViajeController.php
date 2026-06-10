@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\viajes\Controllers;
@@ -247,9 +248,9 @@ class ViajeController extends AbstractController
 
     private function actualizarEstadoProgramacion(int $id, string $estado, string $token): void
     {
-        $ch = curl_init("{$this->msRutasUrl}/programaciones/{$id}");
+        $ch = curl_init("{$this->msRutasUrl}/programaciones/{$id}/estado");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['estado' => $estado]));
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Authorization: ' . $token,

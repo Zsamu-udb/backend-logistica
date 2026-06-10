@@ -19,3 +19,15 @@ php -S localhost:8004 -t public
 # Terminal 5
 cd backend-logistica/ms-viajes
 php -S localhost:8005 -t public
+
+
+# Terminal 1
+cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA /backend-logistica/ms-auth && php -S localhost:8001 -t public
+# Terminal 2
+cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA/backend-logistica/ms-conductores && php -S localhost:8002 -t public
+# Terminal 3
+cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA/backend-logistica/ms-vehiculos && php -S localhost:8003 -t public
+# Terminal 4
+cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA/backend-logistica/ms-rutas && php -S localhost:8004 -t public
+# Terminal 5
+cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA /backend-logistica/ms-viajes && php -S localhost:8005 -t public
