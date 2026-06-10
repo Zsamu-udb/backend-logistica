@@ -16,8 +16,8 @@ $app->addBodyParsingMiddleware();
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware(true, true, true);
 
-$cors($app);
 $auth($app);
+$cors($app);
 $endpoints($app);
 
 $app->run();
