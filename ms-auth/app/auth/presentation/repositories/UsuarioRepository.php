@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\auth\Presentation\Repositories;
@@ -16,10 +17,10 @@ class UsuarioRepository extends AbstractRepository
     {
         return Usuario::where(function ($q) use ($identificador) {
             $q->where('usuario', $identificador)
-              ->orWhere('correo', $identificador);
+                ->orWhere('correo', $identificador);
         })
-        ->where('estado', 'activo')
-        ->first();
+            ->where('estado', 'activo')
+            ->first();
     }
 
     public function findByToken(string $token): ?Usuario

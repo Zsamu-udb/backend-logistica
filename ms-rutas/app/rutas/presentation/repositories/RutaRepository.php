@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\rutas\Presentation\Repositories;
@@ -25,7 +26,7 @@ class RutaRepository extends AbstractRepository
         if (!empty($filtros['ciudad'])) {
             $query->where(function ($q) use ($filtros) {
                 $q->where('ciudad_origen',  'like', '%' . $filtros['ciudad'] . '%')
-                  ->orWhere('ciudad_destino', 'like', '%' . $filtros['ciudad'] . '%');
+                    ->orWhere('ciudad_destino', 'like', '%' . $filtros['ciudad'] . '%');
             });
         }
 
@@ -35,7 +36,7 @@ class RutaRepository extends AbstractRepository
     public function existeRuta(string $origen, string $destino, ?int $excludeId = null): bool
     {
         $query = Ruta::where('ciudad_origen',  $origen)
-                     ->where('ciudad_destino', $destino);
+            ->where('ciudad_destino', $destino);
         if ($excludeId) {
             $query->where('id', '!=', $excludeId);
         }

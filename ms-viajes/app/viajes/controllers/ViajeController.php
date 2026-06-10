@@ -13,6 +13,7 @@ class ViajeController extends AbstractController
     private SeguimientoRepository $seguimientoRepository;
     private string $msRutasUrl = 'http://localhost:8004';
 
+
     public function __construct()
     {
         $this->seguimientoRepository = new SeguimientoRepository();

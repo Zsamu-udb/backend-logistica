@@ -31,3 +31,6 @@ cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA/backend-logistica/ms-vehiculos && ph
 cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA/backend-logistica/ms-rutas && php -S localhost:8004 -t public
 # Terminal 5
 cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA /backend-logistica/ms-viajes && php -S localhost:8005 -t public
+
+admin   admin123
+logistica logistica123

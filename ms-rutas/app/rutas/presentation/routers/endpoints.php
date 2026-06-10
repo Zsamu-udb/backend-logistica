@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use App\rutas\Controllers\RutaController;
@@ -17,5 +18,5 @@ return function (App $app): void {
     $app->get('/programaciones/{id}',         [ProgramacionController::class, 'show']);
     $app->post('/programaciones',             [ProgramacionController::class, 'store']);
     $app->put('/programaciones/{id}',         [ProgramacionController::class, 'update']);
-    $app->patch('/programaciones/{id}/estado',[ProgramacionController::class, 'cambiarEstado']);
+    $app->patch('/programaciones/{id}/estado', [ProgramacionController::class, 'cambiarEstado']);
 };

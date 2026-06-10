@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\conductores\Controllers;
@@ -48,8 +49,13 @@ class ConductorController extends AbstractController
 
         // Validar campos obligatorios
         $required = [
-            'nombres', 'apellidos', 'documento', 'telefono',
-            'correo', 'numero_licencia', 'categoria_licencia',
+            'nombres',
+            'apellidos',
+            'documento',
+            'telefono',
+            'correo',
+            'numero_licencia',
+            'categoria_licencia',
             'fecha_vencimiento_licencia'
         ];
 
