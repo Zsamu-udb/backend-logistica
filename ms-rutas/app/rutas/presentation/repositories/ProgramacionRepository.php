@@ -36,7 +36,9 @@ class ProgramacionRepository extends AbstractRepository
             $query->where('fecha_salida', $filtros['fecha']);
         }
 
-        return $query->orderBy('fecha_salida', 'desc')->get();
+        return $query
+            ->orderBy('id', 'desc')
+            ->get();
     }
 
     public function conductorDisponible(int $conductorId): bool
