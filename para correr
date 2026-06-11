@@ -34,3 +34,6 @@ cd C:/Users/USUARIO/Documents/ULTIMA PRUEBA /backend-logistica/ms-viajes && php 
 
 admin   admin123
 logistica logistica123
+
+
+composer install
